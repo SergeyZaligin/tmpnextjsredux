@@ -349,17 +349,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _store_reducers_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/reducers/common */ "./store/reducers/common.js");
+/* harmony import */ var _store_rootReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/rootReducer */ "./store/rootReducer.js");
 
 
- //import rootReducer from "./store/reducers/rootReducer";
-//console.log(rootReducer);
+
+ //console.log(rootReducer);
 // REDUCERS
-
- // ACTIONS
+//import common from "./store/reducers/common";
+// ACTIONS
 
 function initializeStore() {
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_store_reducers_common__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a)));
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_store_rootReducer__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a)));
 }
 
 /***/ }),
@@ -430,6 +430,26 @@ function common() {
       return state;
   }
 }
+
+/***/ }),
+
+/***/ "./store/rootReducer.js":
+/*!******************************!*\
+  !*** ./store/rootReducer.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reducers_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/common */ "./store/reducers/common.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  common: _reducers_common__WEBPACK_IMPORTED_MODULE_1__["default"]
+}));
 
 /***/ }),
 
